@@ -1,0 +1,40 @@
+
+<div>
+ 
+
+    
+    <mat-table [dataSource]="childDataSource" class="mat-elevation-z8">
+ 
+      <ng-container matColumnDef="id">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> ID. </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+      </ng-container>
+  
+
+   
+      <ng-container matColumnDef="sender">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> Sender </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element">{{element.sender}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="receiver">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> Receiver </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element"> {{element.receiver}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="totalAmount">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> Total Amount </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element"> {{element.totalAmount}} </mat-cell>
+      </ng-container>
+    
+  
+      <ng-container matColumnDef="paidAmount">
+        <mat-header-cell mat-header-cell *matHeaderCellDef> Paid Amount </mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let element"> {{element.paidAmount}} </mat-cell>
+      </ng-container>
+    
+   
+      <mat-header-row *matHeaderRowDef="displayedColumnsChild"></mat-header-row>
+      <mat-row matRipple *matRowDef="let row; columns: displayedColumnsChild;"></mat-row>
+  
+    </mat-table>
+    
+  </div>
